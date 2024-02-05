@@ -20,6 +20,7 @@ class PointsCounter extends StatelessWidget {
           ),
         ),
         body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Column(
               children: [
@@ -93,6 +94,10 @@ class PointsCounter extends StatelessWidget {
                   flex: 12,
                 )
               ],
+            ),
+            VerticalDivider(
+              thickness: 2,
+              color: Colors.grey,
             ),
             Column(
               children: [
