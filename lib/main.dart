@@ -60,7 +60,7 @@ class _PointsCounterState extends State<PointsCounter> {
                           teamAPoints++;
                         });
                       },
-                      child: Text(
+                      child: const Text(
                         'Add 1 point',
                         style: TextStyle(
                           fontSize: 20,
@@ -73,17 +73,17 @@ class _PointsCounterState extends State<PointsCounter> {
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        minimumSize: Size(150, 50),
+                        minimumSize: const Size(150, 50),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)),
-                        primary: Color.fromARGB(255, 83, 146, 180),
+                        primary: const Color.fromARGB(255, 83, 146, 180),
                       ),
                       onPressed: () {
                         setState(() {
                           teamAPoints += 2;
                         });
                       },
-                      child: Text(
+                      child: const Text(
                         'Add 2 point',
                         style: TextStyle(
                           fontSize: 20,
@@ -106,7 +106,7 @@ class _PointsCounterState extends State<PointsCounter> {
                           teamAPoints += 3;
                         });
                       },
-                      child: Text(
+                      child: const Text(
                         'Add 3 point',
                         style: TextStyle(
                           fontSize: 20,
@@ -125,7 +125,7 @@ class _PointsCounterState extends State<PointsCounter> {
                 ),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       'Team B',
                       style: TextStyle(
                         fontSize: 35,
@@ -133,7 +133,7 @@ class _PointsCounterState extends State<PointsCounter> {
                     ),
                     Text(
                       '$teamBPoints',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 200,
                       ),
                     ),
@@ -149,7 +149,7 @@ class _PointsCounterState extends State<PointsCounter> {
                           teamBPoints++;
                         });
                       },
-                      child: Text(
+                      child: const Text(
                         'Add 1 point',
                         style: TextStyle(
                           fontSize: 20,
@@ -172,7 +172,7 @@ class _PointsCounterState extends State<PointsCounter> {
                           teamBPoints += 2;
                         });
                       },
-                      child: Text(
+                      child: const Text(
                         'Add 2 point',
                         style: TextStyle(
                           fontSize: 20,
@@ -195,7 +195,7 @@ class _PointsCounterState extends State<PointsCounter> {
                           teamBPoints += 3;
                         });
                       },
-                      child: Text(
+                      child: const Text(
                         'Add 3 point',
                         style: TextStyle(
                           fontSize: 20,
@@ -221,7 +221,7 @@ class _PointsCounterState extends State<PointsCounter> {
                   teamBPoints = 0;
                 });
               },
-              child: Text(
+              child: const Text(
                 'Reset',
                 style: TextStyle(
                   fontSize: 20,
