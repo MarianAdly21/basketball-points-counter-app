@@ -4,8 +4,14 @@ void main() {
   runApp(PointsCounter());
 }
 
-class PointsCounter extends StatelessWidget {
+class PointsCounter extends StatefulWidget {
+  @override
+  State<PointsCounter> createState() => _PointsCounterState();
+}
+
+class _PointsCounterState extends State<PointsCounter> {
   int teamAPoints = 0;
+
   int teamBPoints = 0;
 
   @override
@@ -49,7 +55,11 @@ class PointsCounter extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5)),
                         primary: Color.fromARGB(255, 83, 146, 180),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          teamAPoints++;
+                        });
+                      },
                       child: Text(
                         'Add 1 point',
                         style: TextStyle(
@@ -68,7 +78,11 @@ class PointsCounter extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5)),
                         primary: Color.fromARGB(255, 83, 146, 180),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          teamAPoints += 2;
+                        });
+                      },
                       child: Text(
                         'Add 2 point',
                         style: TextStyle(
@@ -87,7 +101,11 @@ class PointsCounter extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5)),
                         primary: Color.fromARGB(255, 83, 146, 180),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          teamAPoints += 3;
+                        });
+                      },
                       child: Text(
                         'Add 3 point',
                         style: TextStyle(
@@ -126,7 +144,11 @@ class PointsCounter extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5)),
                         primary: Color.fromARGB(255, 83, 146, 180),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          teamBPoints++;
+                        });
+                      },
                       child: Text(
                         'Add 1 point',
                         style: TextStyle(
@@ -145,7 +167,11 @@ class PointsCounter extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5)),
                         primary: Color.fromARGB(255, 83, 146, 180),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          teamBPoints += 2;
+                        });
+                      },
                       child: Text(
                         'Add 2 point',
                         style: TextStyle(
@@ -164,7 +190,11 @@ class PointsCounter extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5)),
                         primary: Color.fromARGB(255, 83, 146, 180),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          teamBPoints += 3;
+                        });
+                      },
                       child: Text(
                         'Add 3 point',
                         style: TextStyle(
@@ -185,7 +215,12 @@ class PointsCounter extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5)),
                 primary: Color.fromARGB(255, 83, 146, 180),
               ),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  teamAPoints = 0;
+                  teamBPoints = 0;
+                });
+              },
               child: Text(
                 'Reset',
                 style: TextStyle(
